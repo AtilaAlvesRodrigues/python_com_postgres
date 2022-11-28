@@ -1,19 +1,21 @@
 import psycopg2
 import psycopg2.extras
 
+#no caso o nome da minha database era teste, então altera para a sua 
 hostname = 'localhost'
-database = 'demo'
+database = 'teste'
 username = 'postgres'
 pwd = 'admin'
 port_id = 5432
 conn = None
 
+#alterar para a sua senha em password
 try:
     with psycopg2.connect(
                 host = hostname,
                 dbname = database,
                 user = username,
-                password = pwd,
+                password = senha_bem_aqui,
                 port = port_id) as conn:
 
         with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
@@ -42,6 +44,8 @@ try:
             cur.execute('SELECT * FROM EMPLOYEE')
             for record in cur.fetchall():
                 print(record['name'], record['salary'])
+                #se tudo der certo vai sair o nome e o salario
+                
 except Exception as error:
     print(error)
 finally:
