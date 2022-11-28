@@ -30,7 +30,7 @@ try:
             cur.execute(create_script)
 
             insert_script  = 'INSERT INTO employee (id, name, salary, dept_id) VALUES (%s, %s, %s, %s)'
-            insert_values = [(1, 'James', 12000, 'D1'), (2, 'Robin', 15000, 'D1'), (3, 'Xavier', 20000, 'D2')]
+            insert_values = [(1, 'Atila', 12000, 'D1'), (2, 'Alves', 15000, 'D1'), (3, 'Rodrigues', 20000, 'D2')]
             for record in insert_values:
                 cur.execute(insert_script, record)
 
@@ -38,7 +38,7 @@ try:
             cur.execute(update_script)
 
             delete_script = 'DELETE FROM employee WHERE name = %s'
-            delete_record = ('James',)
+            delete_record = ('Rodrigues',)
             cur.execute(delete_script, delete_record)
 
             cur.execute('SELECT * FROM EMPLOYEE')
