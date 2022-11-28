@@ -9,6 +9,9 @@
 instalar a extenção - SQLTools - no vscode<br/>
 como eu utilizei o postgres eu tive d baixar a extenção - SQLTools PostgreSQL/Cockroach Driver - para poder me conectar ao banco de dados
 <br/>
+
+## Banco de dados 
+adicionar um novo banco de dados para que possa ser manipulado
   
 ## SQLTools
 1 passo - adicionar nova conecção(add new connection)<br/>
